@@ -1,0 +1,13 @@
+{
+      "id": "bahmni.claims",
+      "extensionPoints": [
+          {
+              "id": "org.bahmni.claims.dashboard",
+              "description": "Bahmni Claims Page"
+          }
+      ],
+      "config" : {
+        "searchHandler": "emrapi.sqlSearch.activePatientsByLocation"
+      }
+
+}

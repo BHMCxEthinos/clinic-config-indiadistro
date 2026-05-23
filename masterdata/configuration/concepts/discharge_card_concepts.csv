@@ -1,0 +1,8 @@
+Uuid,Void/Retire,Same as mappings,Fully specified name:en,Fully specified name:fr,Short name:en,Short name:fr,Description:en,Description:fr,Data class,Data type,Complex data handler,Answers,Members,Allow decimals,Units,Normal low,Normal high,Absolute low,Absolute high,_version:1,_order:1200
+7944776f-c4d9-4e21-ab2f-b153d6609924,,,Treatments,Treatments,,,,,Misc,Text,,,,,,,,,,,
+3709adfa-ac85-4e59-bc91-a64a38141d99,,,Operation / Labour Details,Operation / Labour Details,,,,,Misc,Text,,,,,,,,,,,
+0604c0ea-d07d-4a0b-adef-b0718d230775,,,Follow-up,Follow-up,,,,,Misc,Date,,,,,,,,,,,
+c1cae2e8-55c1-4881-b243-dd3e8669a02f,,,Advice on Discharge,Advice on Discharge,,,,,Misc,Text,,,,,,,,,,,
+2fe4f691-9336-4b62-a8f9-757f27cefb2f,,,Diagnoses,Diagnoses,,,,,Misc,Text,,,,,,,,,,,
+294c38d7-348f-45d4-9e10-29988ca5e659,,,Date of Discharge,Date of Discharge,,,,,Misc,Date,,,,,,,,,,,
+db892a51-451c-4125-b729-58ecad50332c,,,Date of Admission,Date of Admission,,,,,Misc,Date,,,,,,,,,,,

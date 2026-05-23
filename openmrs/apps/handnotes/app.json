@@ -1,0 +1,9 @@
+{
+      "id": "bahmni.handnotes",
+      "extensionPoints": [
+          {
+              "id": "org.bahmni.patient.search",
+              "description": "Bahmni patient search, lookup Page"
+          }
+      ]
+}

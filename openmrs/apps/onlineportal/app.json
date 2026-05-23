@@ -1,0 +1,6 @@
+{
+  "id": "bahmni.onlineportal",
+  "config" : {
+    "enableOTP": false
+  }
+}
