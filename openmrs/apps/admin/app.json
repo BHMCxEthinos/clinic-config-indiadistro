@@ -7,7 +7,7 @@
             }
         ],
         "config" : {
-          "patientDocumentContainerName": "bahmni-cloud-package-patient-documents-1",
+          "patientDocumentContainerName": " bahmni-india-package-patient-documents-1",
           "programName": "Surgery Plan"
         }
 
