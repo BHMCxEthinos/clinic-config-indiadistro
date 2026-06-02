@@ -115,18 +115,6 @@
                 "hideEmptyDisplayControl": true,
                 "displayOrder":10
             },
-            "radiologyOrders": {
-                "orderType": "Radiology Order",
-                "type": "ordersControl",
-                "translationKey": "DASHBOARD_TITLE_RADIOLOGY_ORDERS_KEY",
-                "displayOrder": 23,
-                "displayType": "Half-Page",
-                "hideEmptyDisplayControl": true,
-                "dashboardConfig": {
-                    "conceptNames": ["Summary"],
-                    "numberOfVisits": 4
-                }
-            },
             "labOrdersDisplayControl":{
                 "translationKey":"DASHBOARD_TITLE_LAB_ORDERS_DISPLAY_CONTROL_KEY",
                 "type":"ordersControl",
@@ -338,31 +326,6 @@
                 },
                 "displayOrder": 21,
                 "title": "Patient Document"
-            },
-            "patientAppointments": {
-                "type": "custom",
-                "displayOrder": 13,
-                "displayType": "Half-Page",
-                "config": {
-                    "title": "DASHBOARD_TITLE_APPOINTMENTS_KEY",
-                    "template": "<patient-appointments-dashboard section='config' patient='patient'></patient-appointments-dashboard>"
-                }
-            },
-            "procedureDisplayControl":{
-                "translationKey":"DASHBOARD_TITLE_PROCEDURE_DISPLAY_CONTROL_KEY",
-                "type":"ordersControl",
-                "orderType":"Procedure Order",
-                "showDetailsButton":true,
-                "displayOrder":40,
-                "displayType": "Half-Page",
-                "hideEmptyDisplayControl": true,
-                "dashboardConfig":{
-                    "conceptNames":[]
-                },
-                "expandedViewConfig":{
-                    "conceptNames":[],
-                    "showDetailsButton":false
-                }
             },
             "Form 2 Obs To Obs": {
                 "displayType": "Half-Page",
