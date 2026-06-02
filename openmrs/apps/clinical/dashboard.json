@@ -115,21 +115,6 @@
                 "hideEmptyDisplayControl": true,
                 "displayOrder":10
             },
-            "labOrdersDisplayControl":{
-                "translationKey":"DASHBOARD_TITLE_LAB_ORDERS_DISPLAY_CONTROL_KEY",
-                "type":"ordersControl",
-                "displayType": "Half-Page",
-                "orderType":"Lab Order",
-                "showDetailsButton":true,
-                "displayOrder":8,
-                "dashboardConfig":{
-                    "conceptNames":[]
-                },
-                "expandedViewConfig":{
-                    "conceptNames":[],
-                    "showDetailsButton":true
-                }
-            },
             "bacteriologyResults": {
                 "translationKey":"DASHBOARD_TITLE_BACTERIOLOGY_RESULTS_KEY",
                 "type":"bacteriologyResultsControl",
