@@ -1,0 +1,8 @@
+Uuid,Void/Retire,Name,Description,Parent,Attribute|id_prefix,Tags,Address 1,Address 2,Address 3,Address 4,Address 5,Address 6,City/Village,County/District,State/Province,Postal Code,Country
+833d0c66-e29a-4d31-ac13-ca9050d1bfa9,TRUE,Bahmni Clinic,,,,Login Location; Visit Location; Facility,,,,,,,,,,,
+833d0c66-e29a-4d31-ac13-ca9050d1bfa9,,Bharth Clinic,,,,Organization,,,,,,,,,,,
+72636eba-29bf-4d6c-97c4-4b04d87a95b5,,Customer 1,,Bharth Clinic,,Facility,,,,,,,,BANGALORE,KARNATAKA,,
+62b55a63-f3a0-4f7c-9ea6-a85f2e7cd09a,,Customer 2,,Bharth Clinic,,Facility,,,,,,,,MUMBAI,MAHARASHTRA,,
+1973e910-160e-42ef-9daf-3f020f62c4cf,,OHC - 1,,Customer 1,,Login Location; Visit Location,,,,,,,,,,,
+5e232c47-8ff5-4c5c-8057-7e39a64fefa5,,OHC - 2,,Customer 1,,Login Location; Visit Location,,,,,,,,,,,
+b5da9afd-b29a-4cbf-91c9-ccf2aa5f799e,,OHC - 3,,Customer 2,,Login Location; Visit Location,,,,,,,,MUMBAI,MAHARASHTRA,,
