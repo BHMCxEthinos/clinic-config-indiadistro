@@ -121,5 +121,15 @@
     "icon": "fa fa-pencil-square-o",
     "order": 14,
     "requiredPrivilege": "app:claims"
+  },
+  "drug": {
+    "id": "bahmni.drug",
+    "extensionPointId": "org.bahmni.home.dashboard",
+    "type": "link",
+    "translationKey": "Drug",
+    "url": "../../openmrs/admin/concepts/conceptDrug.form",
+    "icon": "fa-plus-circle ",
+    "order": 12,
+    "requiredPrivilege": "app:admin"
   }
 }
