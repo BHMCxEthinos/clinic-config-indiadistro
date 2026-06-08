@@ -33,7 +33,18 @@
         "uniquePersonAttribute": "FileNumber",
         "uniquePersonAttributeErrorText": "Please specify unique File number",
         "mandatoryPersonAttributes" : ["phoneNumber"],
-        "patientInformation": {},
+        "patientInformation": {
+            "additionalPatientInformation": {
+                "title": "Other Information",
+                "attributes": [
+                    "Employee ID"
+                ],
+                "expanded": true
+            },
+            "defaults": {
+                "Language Preferred": "English"
+            }
+        },
         "defaultIdentifierPrefix": "ABC",
         "showMiddleName": true,
         "showLastName": true,
