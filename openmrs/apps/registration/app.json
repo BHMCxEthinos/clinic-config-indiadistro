@@ -37,7 +37,8 @@
             "additionalPatientInformation": {
                 "title": "Other Information",
                 "attributes": [
-                    "Employee ID"
+                    "Employee ID",
+                    "Company Code"
                 ],
                 "expanded": true
             },
@@ -60,8 +61,8 @@
         "readOnlyExtraIdentifiers": ["ABHA Number","ABHA Address"],
         "printOptions": [
             {
-                "translationKey": "Patient Feedback Form",
-                "templateUrl": "/bahmni_config/openmrs/apps/registration/consentFormsLayout/feedbackForm.html",
+                "translationKey": "Patient QRcode",
+                "templateUrl": "/bahmni_config/openmrs/apps/registration/registrationCardLayout/print_qrcode.html",
                 "shortcutKey": "p"
             }
         ],
