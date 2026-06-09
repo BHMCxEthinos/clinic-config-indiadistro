@@ -256,11 +256,11 @@
     "order": 7,
     "requiredPrivilege": "app:clinical:bacteriologyTab-toRemove"
   },
-  "bahmniExternalMedicineTab": {
-    "id": "bahmni.external.medicine.tab",
+  "bahmniExternalMedicationTab": {
+    "id": "bahmni.external.medication.tab",
     "extensionPointId": "org.bahmni.clinical.consultation.board",
     "type": "link",
-    "label": "External Medicine",
+    "label": "External Medication",
     "extensionParams":{
       "tabConfigName": "allMedicationTabConfig",
       "sections": {
