@@ -1,0 +1,8 @@
+Uuid,Void/Retire,Name,Description,Format,Foreign uuid,Searchable,Edit privilege,_order:1000
+,TRUE,givenNameLocal,,,,,,
+,,phoneNumber,Phone Number,java.lang.String,,yes,,
+,,alternatePhoneNumber,Alternate Phone Number,java.lang.String,,yes,,
+b55d220f-b683-44e2-873b-6737e3f995e1,,Employee ID,,java.lang.String,,,,
+5369640e-329d-47de-bd02-97fc01d4d5b9,,Blood Group,,org.openmrs.Concep,163126AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,,,
+cc9009bd-e83f-4308-b38e-094634a7a662,,Patient Type,,org.openmrs.Concep,14a00c9a-5d9e-45f6-bf09-e8a7958a545e,,,
+dc6942d8-7734-4224-9b1e-413b26819342,,Company Code,,java.lang.String,,,,
