@@ -34,6 +34,16 @@
                     "title": null,
                     "maximumNoOfVisits": 10
                 },
+                "formGroup": [
+                    "History and Examination",
+                    "Follow Up",
+                    "Under Treatment and Fitness Certificate",
+                    "Referral letter",
+                    "Vitals",
+                    "Immunization Incident Record"
+
+                ],
+
                 "translationKey": "Forms"
             },
             "diagnosis": {
@@ -98,7 +108,36 @@
                     "header": "Prescriptions",
                     "logo": "../images/visitPrintHeader.png"
                 }
-            },                       
+            },
+            "radiology": {
+                "translationKey":"DASHBOARD_TITLE_RADIOLOGY_KEY",
+                "type":"radiology",
+                "displayType": "Half-Page",
+                "showDetailsButton":true,
+                "hideEmptyDisplayControl": true,
+                "displayOrder":5
+            },
+            "programs": {
+                "translationKey":"DASHBOARD_TITLE_PROGRAMS_KEY",
+                "type":"programs",
+                "displayType": "Half-Page",
+                "hideEmptyDisplayControl": true,
+                "displayOrder":10
+            },
+            "bacteriologyResults": {
+                "translationKey":"DASHBOARD_TITLE_BACTERIOLOGY_RESULTS_KEY",
+                "type":"bacteriologyResultsControl",
+                "displayOrder": 20,
+                "scope":"All",
+                "hideEmptyDisplayControl": true,
+                "orderType":"",
+                "displayType": "Half-Page",
+                "dashboardConfig":{
+                    "conceptNames":[  
+                        "BACTERIOLOGY CONCEPT SET"
+                    ]
+                }
+            },
             "labResults": {
                 "translationKey": "DASHBOARD_TITLE_LAB_RESULTS_KEY",
                 "type": "labOrders",
