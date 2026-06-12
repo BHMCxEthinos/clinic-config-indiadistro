@@ -255,52 +255,5 @@
     "icon": "icon-user-md",
     "order": 7,
     "requiredPrivilege": "app:clinical:bacteriologyTab-toRemove"
-  },
-  "bahmniExternalMedicationTab": {
-    "id": "bahmni.external.medication.tab",
-    "extensionPointId": "org.bahmni.clinical.consultation.board",
-    "type": "link",
-    "label": "External Medication",
-    "extensionParams":{
-      "tabConfigName": "allMedicationTabConfig",
-      "sections": {
-        "basicDetails":{  
-          "translationKey":"DASHBOARD_TITLE_BASIC_DETAILS_KEY",
-          "type": "observation",
-          "isObservation": true,
-          "displayOrder": 1,
-          "dashboardConfig": {
-            "conceptNames":[  
-              "Height (cm)",
-              "Weight (kg)"
-            ],
-            "displayNameType": "FSN",
-            "showDetailsButton": true,
-            "numberOfVisits":2
-          },
-          "expandedViewConfig": { 
-            "conceptNames":[  
-              "Height (cm)",
-              "Weight (kg)",
-              "Body mass index",
-              "BMI Status"
-            ],
-            "scope": "latest",
-            "showDetailsButton": true,
-            "displayNameType": "FSN",
-            "pivotTable": {}
-          },
-          "hideEmptyDisplayControl": true
-        },
-        "allergies": {
-          "type": "allergies",
-          "displayOrder": 2
-        }
-      }
-    },
-    "url": "treatment",
-    "icon": "fa-user-md",
-    "order": 7,
-    "requiredPrivilege": "app:clinical:treatmentTab"
   }
 }
