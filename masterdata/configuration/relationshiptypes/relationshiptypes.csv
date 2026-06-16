@@ -1,2 +1,6 @@
 Uuid,Void/Retire,Name,Description,Weight,Preferred,A is to b,B is to a
-2a5f4ff4-a179-4b8a-aa4c-40f71956ebbc,true,,,,,,
+2a5f4ff4-a179-4b8a-aa4c-40f71956ebbc,TRUE,,,,,,
+521e9c29-6505-4a43-bc1b-20337323634f,,Mother/Mother,Relation between mother and child,,,Mother,Mother
+22932981-bba2-41d7-ad67-6660568f7d35,,Father/Father,Relationship from a father to the child,,,Father,Father
+69677733-3c87-4368-a536-9d2fd19e16ff,,Spouse/Spouse,Relationship between,,,Spouse,Spouse
+e82c4387-1d70-496a-95b7-75585f0826b1,,Child/Child,Relationship between,,,Child,Child

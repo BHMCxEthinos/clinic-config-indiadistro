@@ -64,6 +64,3 @@ c76ccf7e-9472-4cc9-8c5c-2db8e8f5612d,,,Sleep Duration (Hours),,,,,,Finding,Numer
 2062955a-eb02-4c9e-ae95-c675705835bd,,,Occupational Activity,,,,,,Misc,Coded,,Heavy;Moderate;Mild;None,,,,,,,,,
 0c7cdd23-1f16-47e1-86d8-80a27a63f7b1,,,History of Heart Diseases,,,,,,Diagnosis,Coded,,No;Yes;Unknown,,,,,,,,,
 93c0e4f4-0768-4882-b642-01ddf8b8dd8d,,,Family history of Cancer,,,,,,Diagnosis,Coded,,No;Yes;Unknown,,,,,,,,,
-7fc63be9-463b-4c70-aab1-a03756380dc9,,,Open Consultation,,,,,,Misc,N/A,,,,,,,,,,,
-4fae1a56-5918-43d7-a58d-a25046002ae6,,,Complete Consultation,,,,,,Misc,N/A,,,,,,,,,,,
-1e683dc1-57e7-4b36-8d9a-1ecb168d7070,,,Consultation Status,,,,,,Misc,Coded,,Open Consultation;Complete Consultation,,,,,,,,,
