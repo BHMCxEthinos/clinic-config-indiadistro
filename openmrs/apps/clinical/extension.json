@@ -68,6 +68,20 @@
     "order": 1,
     "requiredPrivilege": "app:clinical"
   },
+  "bahmniClinicalPatientsSearchAllActiveWaitingPatients": {
+    "id": "bahmni.clinical.patients.search.allActiveWaitingPatients",
+    "extensionPointId": "org.bahmni.patient.search",
+    "type": "config",
+    "extensionParams": {
+      "searchHandler": "emrapi.sqlSearch.activeWaitingPatients",
+      "translationKey": "MODULE_LABEL_WAITING_KEY",
+      "forwardUrl": "#/default/patient/{{patientUuid}}/dashboard",
+      "searchColumns": ["identifier", "name", "extraIdentifierVal"]
+    },
+    "label": "Waiting",
+    "order": 2,
+    "requiredPrivilege": "app:clinical"
+  },
   "bahmniClinicalPatientsCustomNotifications": {
     "id": "bahmni.clinical.patients.custom.notifications",
     "extensionPointId": "org.bahmni.patient.search",
@@ -143,7 +157,7 @@
     },
     "label": "All",
     "order": 5,
-    "requiredPrivilege": "app:clinical"
+    "requiredPrivilege": "app:clinical-toRemove"
   },
   "bahmniClinicalConceptSetGroupObservationsHistory": {
     "id": "bahmni.clinical.conceptSetGroup.observations.history",
