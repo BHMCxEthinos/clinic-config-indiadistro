@@ -4,5 +4,5 @@ Uuid,Void/Retire,Entity name,Name,Description,Min occurs,Max occurs,Datatype cla
 ,,program,Co-morbidites,Co-morbidites,0,,org.openmrs.customdatatype.datatype.BooleanDatatype,,,,
 ,,program,Doctor-In-Charge,Doctor In Charge,0,,org.openmrs.customdatatype.datatype.FreeTextDatatype,,,,
 ,,program,Patient Stage,Patient Stage,0,,org.openmrs.customdatatype.datatype.ConceptDatatype,ebdf9113-6d27-42a4-8251-642a741a2106,,,
-,,Location,Customer Code,,0,,Free Text,,,,
-,,Location,ABDM HFR Name,,0,,Free Text,,,,
+,,Location,Customer Code,,0,,org.openmrs.customdatatype.datatype.FreeTextDatatype,,,,
+,,Location,ABDM HFR Name,,0,,org.openmrs.customdatatype.datatype.FreeTextDatatype,,,,
