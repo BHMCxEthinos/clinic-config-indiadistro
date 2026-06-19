@@ -80,32 +80,37 @@
                  concat("",v.uuid) as activeVisitUuid,
                  IF(va.value_reference = "Admitted", "true", "false") as hasBeenAdmitted
                  from
-                   visit v join person_name pn on v.patient_id = pn.person_id and pn.voided = 0 and v.voided=0
-                   join patient_identifier pi on v.patient_id = pi.patient_id and pi.voided=0
-                   join patient_identifier_type pit on pi.identifier_type = pit.patient_identifier_type_id
-                   join global_property gp on gp.property="bahmni.primaryIdentifierType" and gp.property_value=pit.uuid
-                   join person p on p.person_id = v.patient_id  and p.voided=0
-                   join encounter en on en.visit_id = v.visit_id and en.voided=0
-                   left outer join location loc on en.location_id = loc.location_id
-                   join encounter_provider ep on ep.encounter_id = en.encounter_id  and ep.voided=0
-                   join provider pr on ep.provider_id=pr.provider_id and pr.retired=0
-                   join person per on pr.person_id=per.person_id and per.voided=0
-                   join location_attribute la on loc.location_id = la.location_id and la.voided = 0
-                   join location_attribute_type lat on la.attribute_type_id = lat.location_attribute_type_id and lat.name = 'Customer Code'
-                   join person_attribute pa on p.person_id = pa.person_id and pa.voided = 0
-                   join person_attribute_type pat on pa.person_attribute_type_id = pat.person_attribute_type_id and pat.name = 'Company Code'
-                   join concept_name cn1 on cn1.name = 'Consultation Status' and cn1.concept_name_type = "FULLY_SPECIFIED" and cn1.locale='en' and cn1.voided=0 
-                   join concept_name cn2 on cn2.name = 'Open Consultation' and cn2.concept_name_type = "FULLY_SPECIFIED" and cn2.locale='en' and cn2.voided=0 
-                   join obs o on o.encounter_id = en.encounter_id and o.voided=0 and p.person_id = o.person_id 
-                   left outer join visit_attribute va on va.visit_id = v.visit_id and va.attribute_type_id = (
+                    visit v join person_name pn on v.patient_id = pn.person_id and pn.voided = 0 and v.voided=0
+                    join patient_identifier pi on v.patient_id = pi.patient_id and pi.voided=0
+                    join patient_identifier_type pit on pi.identifier_type = pit.patient_identifier_type_id
+                    join global_property gp on gp.property="bahmni.primaryIdentifierType" and gp.property_value=pit.uuid
+                    join person p on p.person_id = v.patient_id  and p.voided=0
+                    join encounter en on en.visit_id = v.visit_id and en.voided=0
+                    left outer join location loc on en.location_id = loc.location_id
+                    join encounter_provider ep on ep.encounter_id = en.encounter_id  and ep.voided=0
+                    join provider pr on ep.provider_id=pr.provider_id and pr.retired=0
+                    join person per on pr.person_id=per.person_id and per.voided=0
+                    join location_attribute la on loc.location_id = la.location_id and la.voided = 0
+                    join location_attribute_type lat on la.attribute_type_id = lat.location_attribute_type_id and lat.name = 'Customer Code'
+                    join person_attribute pa on p.person_id = pa.person_id and pa.voided = 0
+                    join person_attribute_type pat on pa.person_attribute_type_id = pat.person_attribute_type_id and pat.name = 'Company Code'
+                    join concept_name cn1 on cn1.name = 'Consultation Status' and cn1.concept_name_type = "FULLY_SPECIFIED" and cn1.locale='en' and cn1.voided=0 
+                    join concept_name cn2 on cn2.name = 'Open Consultation' and cn2.concept_name_type = "FULLY_SPECIFIED" and cn2.locale='en' and cn2.voided=0 
+                    join (
+                        SELECT encounter_id, person_id, concept_id, value_coded,
+                               ROW_NUMBER() OVER (PARTITION BY person_id, concept_id ORDER BY obs_datetime DESC, obs_id DESC) as rn
+                        FROM obs
+                        WHERE voided = 0
+                    ) o on o.encounter_id = en.encounter_id and o.person_id = p.person_id and o.concept_id = cn1.concept_id and o.rn = 1
+                    left outer join visit_attribute va on va.visit_id = v.visit_id and va.attribute_type_id = (
                                 select visit_attribute_type_id from visit_attribute_type where name="Admission Status"
                             )
                  where
-                   v.date_stopped is null and
-                   loc.uuid=${location_uuid} and
-                   la.value_reference is not null and la.value_reference != '' and pa.value = la.value_reference and 
-                   o.concept_id = cn1.concept_id  and o.value_coded = cn2.concept_id  
-                   order by en.encounter_datetime desc;
+                    v.date_stopped is null and
+                    loc.uuid=${location_uuid} and
+                    la.value_reference is not null and la.value_reference != '' and pa.value = la.value_reference and 
+                    o.value_coded = cn2.concept_id  
+                    order by en.encounter_datetime desc;
             </value>
             <description>SQL query to get the list of active waiting patients company code wise</description>
         </globalProperty>
