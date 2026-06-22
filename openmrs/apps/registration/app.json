@@ -84,8 +84,7 @@
             }
         },
         "addressHierarchy": {
-            "showAddressFieldsTopDown": false,
-            "strictAutocompleteFromLevel": "postalCode"
+            "showAddressFieldsTopDown": false
         },
         "relationshipTypeMap": {
                 "Doctor":"provider",
