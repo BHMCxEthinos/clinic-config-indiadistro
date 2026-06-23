@@ -32,7 +32,11 @@
         "readOnlyFields": ["FileNumber"],
         "uniquePersonAttribute": "FileNumber",
         "uniquePersonAttributeErrorText": "Please specify unique File number",
-        "mandatoryPersonAttributes" : ["phoneNumber"],
+        "mandatoryPersonAttributes" : [
+            "phoneNumber",
+            "Employee ID",
+            "Patient Type"
+        ],
         "patientInformation": {
             "additionalPatientInformation": {
                 "title": "Other Information",
