@@ -46,13 +46,13 @@
                  concat("",v.uuid) as activeVisitUuid,
                  IF(va.value_reference = "Admitted", "true", "false") as hasBeenAdmitted
                  from
-                   visit v join person_name pn on v.patient_id = pn.person_id and pn.voided = 0 and v.voided=0
+                   visit v join person_name pn on v.patient_id = pn.person_id and pn.voided = 0 and v.voided=0 and pn.preferred = 1
                    join patient_identifier pi on v.patient_id = pi.patient_id and pi.voided=0
                    join patient_identifier_type pit on pi.identifier_type = pit.patient_identifier_type_id
                    join global_property gp on gp.property="bahmni.primaryIdentifierType" and gp.property_value=pit.uuid
                    join person p on p.person_id = v.patient_id  and p.voided=0
                    join encounter en on en.visit_id = v.visit_id and en.voided=0
-                   left outer join location loc on en.location_id = loc.location_id
+                   left outer join location loc on en.location_id = loc.location_id and loc.retired = 0 
                    join encounter_provider ep on ep.encounter_id = en.encounter_id  and ep.voided=0
                    join provider pr on ep.provider_id=pr.provider_id and pr.retired=0
                    join person per on pr.person_id=per.person_id and per.voided=0
@@ -80,13 +80,13 @@
                  concat("",v.uuid) as activeVisitUuid,
                  IF(va.value_reference = "Admitted", "true", "false") as hasBeenAdmitted
                  from
-                    visit v join person_name pn on v.patient_id = pn.person_id and pn.voided = 0 and v.voided=0
+                    visit v join person_name pn on v.patient_id = pn.person_id and pn.voided = 0 and v.voided=0 and pn.preferred = 1
                     join patient_identifier pi on v.patient_id = pi.patient_id and pi.voided=0
                     join patient_identifier_type pit on pi.identifier_type = pit.patient_identifier_type_id
                     join global_property gp on gp.property="bahmni.primaryIdentifierType" and gp.property_value=pit.uuid
                     join person p on p.person_id = v.patient_id  and p.voided=0
                     join encounter en on en.visit_id = v.visit_id and en.voided=0
-                    left outer join location loc on en.location_id = loc.location_id
+                    left outer join location loc on en.location_id = loc.location_id and loc.retired = 0 
                     join encounter_provider ep on ep.encounter_id = en.encounter_id  and ep.voided=0
                     join provider pr on ep.provider_id=pr.provider_id and pr.retired=0
                     join person per on pr.person_id=per.person_id and per.voided=0

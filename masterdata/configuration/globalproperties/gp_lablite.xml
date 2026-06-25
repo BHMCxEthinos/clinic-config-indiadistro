@@ -1,0 +1,32 @@
+<config>
+    <globalProperties>
+        <globalProperty>
+            <property>emrapi.sqlSearch.activePatientsWithLabOrders</property>
+            <value>
+                select distinct concat(pn.given_name," ", ifnull(pn.family_name,'')) as name,
+                 pi.identifier as identifier,
+                 concat("",p.uuid) as uuid
+                from
+                   visit v join person_name pn on v.patient_id = pn.person_id and pn.voided = 0 and pn.preferred = 1
+                   join patient_identifier pi on v.patient_id = pi.patient_id and pi.voided=0
+                   join patient_identifier_type pit on pi.identifier_type = pit.patient_identifier_type_id
+                   join global_property gp on gp.property="bahmni.primaryIdentifierType" and gp.property_value=pit.uuid
+                   join person p on p.person_id = v.patient_id  and p.voided=0
+                   join encounter en on en.visit_id = v.visit_id and en.voided=0
+                   left outer join location loc on en.location_id = loc.location_id and loc.retired = 0 
+                   join location_attribute la on loc.location_id = la.location_id and la.voided = 0
+                   join location_attribute_type lat on la.attribute_type_id = lat.location_attribute_type_id and lat.name = 'Customer Code' and lat.retired = 0 
+                   join person_attribute pa on p.person_id = pa.person_id and pa.voided = 0
+                   join person_attribute_type pat on pa.person_attribute_type_id = pat.person_attribute_type_id and pat.name = 'Company Code' and pat.retired = 0 
+                   join orders ord on ord.patient_id = v.patient_id and ord.voided = 0
+                   join order_type ot on ord.order_type_id = ot.order_type_id and ot.name = "Lab Order" 
+                where
+                   v.voided = 0 and loc.uuid=${location_uuid} and
+                   la.value_reference is not null and la.value_reference != '' and pa.value = la.value_reference and 
+                   (ord.fulfiller_status is null or ord.fulfiller_status != 'COMPLETED' or v.date_stopped is null)
+                   order by en.encounter_datetime desc;
+            </value>
+            <description>SQL query to get list of patients with laborders for a login location</description>
+        </globalProperty>
+    </globalProperties>
+</config>
