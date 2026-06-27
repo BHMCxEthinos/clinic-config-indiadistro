@@ -46,6 +46,21 @@
 
                 "translationKey": "Forms"
             },
+            "immunizations": {
+                "title": "Immunizations",
+                "type": "observation",
+                "isObservation": true,
+                "displayOrder": 2,
+                "displayType": "Half-Page",
+                "hideEmptyDisplayControl": false,
+                "dashboardConfig": {
+                    "conceptNames": [
+                        "Immunization history"
+                    ],
+                    "numberOfVisits": 10,
+                    "showDetailsButton": true
+                }
+            },
             "diagnosis": {
                 "translationKey": "DASHBOARD_TITLE_DIAGNOSIS_KEY",
                 "type": "diagnosis",
@@ -487,6 +502,25 @@
                     "drugs":[  
 
                     ]
+                }
+            }
+        }
+    },
+    "immunizationCertificate": {
+        "translationKey": "Immunization Certificate",
+        "maxRecentlyViewedPatients": 10,
+        "sections": {
+            "immunizationHistory": {
+                "title": "Immunizations",
+                "type": "observation",
+                "isObservation": true,
+                "displayType": "Full-Page",
+                "dashboardConfig": {
+                    "conceptNames": [
+                        "Immunization history"
+                    ],
+                    "numberOfVisits": 20,
+                    "showDetailsButton": false
                 }
             }
         }
