@@ -50,7 +50,7 @@
                 "title": "Immunizations",
                 "type": "observation",
                 "isObservation": true,
-                "displayOrder": 2,
+                "displayOrder": 4,
                 "displayType": "Half-Page",
                 "hideEmptyDisplayControl": false,
                 "dashboardConfig": {
