@@ -124,34 +124,12 @@
                     "logo": "../images/visitPrintHeader.png"
                 }
             },
-            "radiology": {
-                "translationKey":"DASHBOARD_TITLE_RADIOLOGY_KEY",
-                "type":"radiology",
-                "displayType": "Half-Page",
-                "showDetailsButton":true,
-                "hideEmptyDisplayControl": true,
-                "displayOrder":5
-            },
             "programs": {
                 "translationKey":"DASHBOARD_TITLE_PROGRAMS_KEY",
                 "type":"programs",
                 "displayType": "Half-Page",
                 "hideEmptyDisplayControl": true,
                 "displayOrder":10
-            },
-            "bacteriologyResults": {
-                "translationKey":"DASHBOARD_TITLE_BACTERIOLOGY_RESULTS_KEY",
-                "type":"bacteriologyResultsControl",
-                "displayOrder": 20,
-                "scope":"All",
-                "hideEmptyDisplayControl": true,
-                "orderType":"",
-                "displayType": "Half-Page",
-                "dashboardConfig":{
-                    "conceptNames":[  
-                        "BACTERIOLOGY CONCEPT SET"
-                    ]
-                }
             },
             "labResults": {
                 "translationKey": "DASHBOARD_TITLE_LAB_RESULTS_KEY",
@@ -425,23 +403,6 @@
         "translationKey":"DASHBOARD_TAB_PATIENT_SUMMARY_KEY",
         "maxRecentlyViewedPatients":10,
         "sections":{
-            "Bacteriology Concept Set":{
-                "displayType":"Full-Page",
-                "translationKey":"DASHBOARD_TITLE_BACTERIOLOGY_RESULTS_KEY",
-                "type":"obsToObsFlowSheet",
-                "dashboardConfig":{
-                    "numberOfVisits":1,
-                    "templateName":"BACTERIOLOGY CONCEPT SET",
-                    "groupByConcept":"Specimen Collection Date",
-                    "conceptNames":[  
-                        "Specimen Id"
-                    ]
-                },
-                "expandedViewConfig":{
-                    "templateName":"BACTERIOLOGY CONCEPT SET",
-                    "groupByConcept":"Specimen Collection Date"
-                }
-            },
             "HistoryAndExamination":{
                 "type":"historyAndExamination",
                 "isObservation":true,
@@ -469,24 +430,6 @@
                 "dashboardConfig":{
                     "showOnlyActive":true,
                     "drugConceptSet":"All Other Drugs"
-                }
-            },
-            "malaria":{
-                "title":"Malaria",
-                "type":"obsToObsFlowSheet",
-                "displayType":"Full-Page",
-                "displayOrder":26,
-                "dashboardConfig":{
-                    "groupByConcept":"Treatment Start Date",
-                    "formNames": [
-                        "Malaria"
-                    ],
-                    "conceptNames":[  
-                        "Rapid test for malaria",
-                        "Malaria risk",
-                        "Malaria, Source",
-                        "Problem severity"
-                    ]
                 }
             },
             "Chronic Treatment Chart":{
