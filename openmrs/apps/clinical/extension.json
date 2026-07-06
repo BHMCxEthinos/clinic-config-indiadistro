@@ -157,7 +157,7 @@
     },
     "label": "All",
     "order": 5,
-    "requiredPrivilege": "app:clinical-toRemove"
+    "requiredPrivilege": "app:clinical"
   },
   "bahmniClinicalConceptSetGroupObservationsHistory": {
     "id": "bahmni.clinical.conceptSetGroup.observations.history",
