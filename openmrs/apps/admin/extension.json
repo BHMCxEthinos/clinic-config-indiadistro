@@ -94,6 +94,18 @@
         "icon": "icon-bahmni-inpatient",
         "order": 1,
         "requiredPrivilege": "app:adminAdt"
+    },
+        "customerOnboarding":{
+        "id": "bahmni.admin.customerOnboarding",
+        "extensionPointId": "org.bahmni.admin.dashboard",
+        "type": "link",
+        "extensionParams": {
+        },
+        "label": "Customer Management",
+        "url": "#/customer-onboarding",
+        "icon": "fa-building",
+        "order": 1,
+        "requiredPrivilege": "app:admin"
     }
 
 }
