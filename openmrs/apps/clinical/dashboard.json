@@ -281,6 +281,22 @@
                 "type": "conditionsList",
                 "displayOrder": 2,
                 "displayType": "Half-Page"
+            },
+            "handnotes": {
+                "type": "handnotes",
+                "translationKey": "DASHBOARD_TITLE_HAND_NOTES_KEY",
+                "isObservation": true,
+                "displayType": "Half-Page",
+                "displayOrder": 25,
+                "dashboardConfig": {
+                    "showGroupDateTime": false,
+                    "isObservationForImages": true,
+                    "persistOrderOfObsDateTime": true,
+                    "conceptNames": [
+                        "Image Note"
+                    ],
+                    "numberOfVisits": 2
+                }
             }
         }
     },
