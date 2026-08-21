@@ -21,6 +21,22 @@
                     "countyDistrict"
                 ]
             },
+            "consultationNotes": {
+                "title": "Consultation Notes",
+                "type": "observation",
+                "isObservation": true,
+                "displayOrder": 11,
+                "displayType": "Half-Page",
+                "hideEmptyDisplayControl": false,
+                "dashboardConfig": {
+                    "conceptNames": [
+                        "Consultation note",
+                        "Consultation Notes"
+                    ],
+                    "numberOfVisits": 10,
+                    "showDetailsButton": true
+                }
+            },
             "allergies": {
                 "type":"allergies",
                 "displayType": "Half-Page",
@@ -436,6 +452,22 @@
                 },
                 "displayOrder":6,
                 "translationKey":"DASHBOARD_TITLE_HISTORY_AND_EXAMINATIONS_KEY"
+            },
+            "consultationNotes": {
+                "title": "Consultation Notes",
+                "type": "consultationNotes",
+                "isObservation": true,
+                "displayOrder": 11,
+                "displayType": "Full-Page",
+                "hideEmptyDisplayControl": false,
+                "dashboardConfig": {
+                    "conceptNames": [
+                        "Consultation note",
+                        "Consultation Notes"
+                    ],
+                    "numberOfVisits": 10,
+                    "showDetailsButton": true
+                }
             },
             "drugOther":{
                 "translationKey":"DASHBOARD_TITLE_TREATMENTS_KEY",
