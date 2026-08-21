@@ -455,7 +455,7 @@
             },
             "consultationNotes": {
                 "title": "Consultation Notes",
-                "type": "consultationNotes",
+                "type": "observation",
                 "isObservation": true,
                 "displayOrder": 11,
                 "displayType": "Full-Page",
