@@ -110,6 +110,38 @@
                 "numberOfVisits":1,
                 "displayOrder":7
             },
+            "patientDocument": {
+                "type": "historyAndExamination",
+                "isObservation": true,
+                "displayType": "Half-Page",
+                "dashboardConfig": {
+                    "showGroupDateTime": false,
+                    "isObservationForImages": true,
+                    "persistOrderOfObsDateTime": true,
+                    "conceptNames": [
+                        "Prescription",
+                        "Discharge Summary",
+                        "Radiology Report",
+                        "Referral Documents",
+                        "Patient File"
+                    ]
+                },
+                "expandedViewConfig": {
+                    "showGroupDateTime": false,
+                    "persistOrderOfObsDateTime": true,
+                    "isObservationForImages": true,
+                    "conceptNames": [
+                        "Prescription",
+                        "Discharge Summary",
+                        "Radiology Report",
+                        "Referral Documents",
+                        "Patient File"
+                    ],
+                    "pivotTable": {}
+                },
+                "displayOrder": 21,
+                "title": "Patient Document"
+            },
             "treatments": {
                 "translationKey": "DASHBOARD_TITLE_TREATMENTS_KEY",
                 "type": "treatment",
