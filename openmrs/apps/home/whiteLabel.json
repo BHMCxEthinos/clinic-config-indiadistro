@@ -60,7 +60,7 @@
       "name": "metabase",
       "title": "Analytics",
       "logo": "/bahmni/images/analytics.png",
-      "link": "http://medapp-dev.bharathmedicare.com:8088/"
+      "link": "superset"
     }
   ]
 }
