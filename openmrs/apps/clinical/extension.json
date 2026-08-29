@@ -44,6 +44,27 @@
     "order": 5,
     "requiredPrivilege": "app:clinical:consultationTab"
   },
+  "externalPrescriptionTab": {
+    "id": "bahmni.clinical.consultation.externalPrescription",
+    "extensionPointId": "org.bahmni.clinical.consultation.board",
+    "type": "link",
+    "label": "External Prescription",
+    "url": "concept-set-group/externalPrescription",
+    "icon": "fa-file-text-o",
+    "order": 5.5,
+    "requiredPrivilege": "app:clinical:consultationTab"
+  },
+  "externalPrescriptionGroup": {
+    "id": "bahmni.clinical.conceptSetGroup.externalPrescription.form",
+    "extensionPointId": "org.bahmni.clinical.conceptSetGroup.externalPrescription",
+    "type": "config",
+    "extensionParams": {
+      "formName": "External Prescription",
+      "default": true
+    },
+    "order": 1,
+    "requiredPrivilege": "app:clinical"
+  },
   "bahmniClinicalOrdersPending": {
     "id": "bahmni.clinical.orders.pending",
     "extensionPointId": "org.bahmni.clinical.orders",

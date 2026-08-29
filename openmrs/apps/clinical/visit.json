@@ -88,6 +88,14 @@
                     "showOtherActive":false,
                     "notOnDashboard": true
                 }
+            },
+            "externalPrescriptionPrint": {
+                "type": "custom",
+                "displayOrder": 20,
+                "config": {
+                    "title": "External Prescription",
+                    "template": "<external-prescription-print></external-prescription-print>"
+                }
             }
         },
         "encounterContext": {

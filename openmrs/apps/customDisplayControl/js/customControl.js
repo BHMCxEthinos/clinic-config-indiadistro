@@ -318,3 +318,20 @@ angular.module('bahmni.common.displaycontrol.custom')
             template: '<ng-include src="contentUrl"/>'
         };
     }]);
+
+    angular.module('bahmni.common.displaycontrol.custom')
+    .directive('externalPrescriptionPrint', ['observationsService', 'appService', 'spinner',
+        function (observationsService, appService, spinner) {
+            var link = function ($scope) {
+                var conceptNames = ["External Prescription Details"];
+                $scope.contentUrl = appService.configBaseUrl() + "/customDisplayControl/views/externalPrescriptionPrint.html";
+                spinner.forPromise(observationsService.fetch($scope.patient.uuid, conceptNames, "latest", undefined, $scope.visitUuid, undefined).then(function (response) {
+                    $scope.observations = response.data;
+                }));
+            };
+            return {
+                restrict: 'E',
+                template: '<ng-include src="contentUrl"/>',
+                link: link
+            };
+        }]);
