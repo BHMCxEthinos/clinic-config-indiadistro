@@ -60,7 +60,7 @@
       "name": "superset",
       "title": "Analytics",
       "logo": "/bahmni/images/analytics.png",
-      "link": "superset"
+      "linkPrefix": "superset"
     }
   ]
 }
