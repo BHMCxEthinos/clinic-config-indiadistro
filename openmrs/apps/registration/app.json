@@ -85,7 +85,7 @@
             "customAttributes": {
                 "label": "Phone Number",
                 "placeholder": "Phone Number",
-                "fields": ["phoneNumber","alternatePhoneNumber"]
+                "fields": ["phoneNumber","alternatePhoneNumber","Patient Type"]
             }
         },
         "addressHierarchy": {
