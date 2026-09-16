@@ -335,3 +335,15 @@ angular.module('bahmni.common.displaycontrol.custom')
                 link: link
             };
         }]);
+
+    angular.module('bahmni.common.displaycontrol.custom')
+        .run(['$rootScope', '$window', function ($rootScope, $window) {
+            $rootScope.$on('$locationChangeStart', function (event, newUrl, oldUrl) {
+                var goingToExternalPrescription = newUrl.indexOf('concept-set-group/externalPrescription') > -1;
+                var alreadyThere = oldUrl && oldUrl.indexOf('concept-set-group/externalPrescription') > -1;
+                if (goingToExternalPrescription && !alreadyThere && oldUrl !== newUrl) {
+                    event.preventDefault();
+                    $window.location.reload();
+                }
+            });
+        }]);
