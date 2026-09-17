@@ -343,7 +343,12 @@ angular.module('bahmni.common.displaycontrol.custom')
             var alreadyThere = oldUrl && oldUrl.indexOf('concept-set-group/externalPrescription') > -1;
             if (goingToExternalPrescription && !alreadyThere && oldUrl !== newUrl) {
                 event.preventDefault();
-                $window.location.href = newUrl;
+                var hashIndex = newUrl.indexOf('#');
+                var basePart = newUrl.substring(0, hashIndex);
+                var hashPart = newUrl.substring(hashIndex);
+                var separator = basePart.indexOf('?') > -1 ? '&' : '?';
+                var bustedUrl = basePart + separator + '_r=' + Date.now() + hashPart;
+                $window.location.href = bustedUrl;
             }
         });
     }]);
