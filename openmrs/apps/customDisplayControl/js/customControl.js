@@ -338,14 +338,19 @@ angular.module('bahmni.common.displaycontrol.custom')
 
     angular.module('bahmni.common.displaycontrol.custom')
     .run(['$rootScope', '$window', function ($rootScope, $window) {
+        var extractGroup = function (url) {
+            var match = url.match(/concept-set-group\/([^\/\?#]+)/);
+            return match ? match[1] : null;
+        };
         $rootScope.$on('$locationChangeStart', function (event, newUrl, oldUrl) {
-            var goingToExternalPrescription = newUrl.indexOf('concept-set-group/externalPrescription') > -1;
-            var alreadyThere = oldUrl && oldUrl.indexOf('concept-set-group/externalPrescription') > -1;
-            if (goingToExternalPrescription && !alreadyThere && oldUrl !== newUrl) {
+            var newGroup = extractGroup(newUrl);
+            var oldGroup = oldUrl ? extractGroup(oldUrl) : null;
+            if (newGroup && oldGroup && newGroup !== oldGroup) {
                 event.preventDefault();
                 var hashIndex = newUrl.indexOf('#');
                 var basePart = newUrl.substring(0, hashIndex);
                 var hashPart = newUrl.substring(hashIndex);
+                basePart = basePart.replace(/[?&]_r=\d+/g, '');
                 var separator = basePart.indexOf('?') > -1 ? '&' : '?';
                 var bustedUrl = basePart + separator + '_r=' + Date.now() + hashPart;
                 $window.location.href = bustedUrl;
