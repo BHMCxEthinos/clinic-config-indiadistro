@@ -74,7 +74,7 @@
   "CLINICAL_ORDER_RADIOLOGY_NEED_PRINT": "Need Print for this order.",
   "CLINICAL_ORDER_RADIOLOGY_NEED_PRINT_BUTTON": "Needs Print",
 
-  "CONSULTATION_PAGE_KEY" :"Note",
+  "CONSULTATION_PAGE_KEY" :"Consultation",
   "PROGRAM_MANAGEMENT_PAGE_KEY":"Program Management Page",
   "DISCHARGE_SUMMARY_PAGE_KEY":"Discharge Summary Page",
   "PATIENT_ADT_PAGE_KEY":"Patient ADT Page",
@@ -83,7 +83,7 @@
   "HOME_DASHBOARD_KEY":"Home Dashboard",
   "MEDICATION_CHANGE_DURATION_BUTTON": "Change Duration",
   "DASHBOARD_TITLE_CONSULTATION_NOTES_KEY": "Complaints and History",
-  "DASHBOARD_TITLE_Consultation_KEY": "Consultation Notes",
+  "DASHBOARD_TITLE_Consultation_KEY": "Note",
   "DASHBOARD_TITLE_APPOINTMENTS_KEY": "Appointments",
   "DASHBOARD_APPOINTMENTS_SLOT_KEY": "Slot",
   "DASHBOARD_APPOINTMENTS_SERVICE_KEY": "Service",
