@@ -22,7 +22,7 @@
                 ]
             },
             "consultationNotes": {
-                "title": "Consultation Notes",
+                "title": "Notes",
                 "type": "observation",
                 "isObservation": true,
                 "displayOrder": 11,
@@ -30,7 +30,7 @@
                 "hideEmptyDisplayControl": false,
                 "dashboardConfig": {
                     "conceptNames": [
-                        "Consultation note",
+                        "Note",
                         "Consultation Notes"
                     ],
                     "numberOfVisits": 10,
@@ -98,7 +98,8 @@
                     "enrolment",
                     "visitAttribute",
                     "labEntry",
-                    "ndhmHIU"
+                    "ndhmHIU",
+                    "patientFiles"
                 ]
             },
             "disposition": {
@@ -486,7 +487,7 @@
                 "translationKey":"DASHBOARD_TITLE_HISTORY_AND_EXAMINATIONS_KEY"
             },
             "consultationNotes": {
-                "title": "Consultation Notes",
+                "title": "Notes",
                 "type": "observation",
                 "isObservation": true,
                 "displayOrder": 11,
@@ -494,7 +495,7 @@
                 "hideEmptyDisplayControl": false,
                 "dashboardConfig": {
                     "conceptNames": [
-                        "Consultation note",
+                        "Note",
                         "Consultation Notes"
                     ],
                     "numberOfVisits": 10,

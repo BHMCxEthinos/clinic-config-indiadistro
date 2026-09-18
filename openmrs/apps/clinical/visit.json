@@ -7,7 +7,7 @@
             "header": "Visit",
             "logo": "../images/visitPrintHeader.png",
             "headerUri": "/bahmni/images/visitPrintHeader.png",
-            "forms": ["History and Examination", "Consultation Note"],
+            "forms": ["History and Examination", "Note"],
             "vitals": ["Systolic blood pressure", "Diastolic blood pressure", "Height (cm)", "Weight (kg)", "Temperature", "Arterial blood oxygen saturation (pulse oximeter)"],
             "obsIgnoreList": ["Radiology", "Document", "Follow-up Condition", "Return visit date", "Reason for visit (text)"],
             "imageNoteName": "Image Note",
@@ -112,7 +112,7 @@
             "header": "Patient Visit Summary",
             "logo": "../images/visitPrintHeader.png",
             "headerUri": "/bahmni/images/visitPrintHeader.png",
-            "forms": ["History and Examination", "Consultation Note"],
+            "forms": ["History and Examination", "Note"],
             "vitals": ["Systolic blood pressure", "Diastolic blood pressure", "Height (cm)", "Weight (kg)", "Temperature", "Arterial blood oxygen saturation (pulse oximeter)"],
             "obsIgnoreList": ["Radiology", "Document", "Follow-up Condition", "Return visit date", "Reason for visit (text)"],
             "imageNoteName": "Image Note",
@@ -213,7 +213,7 @@
                         "Chief Complaint Data",
                         "History of present illness",
                         "Smoking status",
-                        "Consultation Note"
+                        "Note"
                     ],
                     "numberOfVisits": 1
                 }
