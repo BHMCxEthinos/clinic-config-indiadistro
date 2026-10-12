@@ -124,7 +124,8 @@
                         "Discharge Summary",
                         "Radiology Report",
                         "Referral Documents",
-                        "Patient File"
+                        "Patient File",
+                        "Lab Report"
                     ]
                 },
                 "expandedViewConfig": {
@@ -136,7 +137,8 @@
                         "Discharge Summary",
                         "Radiology Report",
                         "Referral Documents",
-                        "Patient File"
+                        "Patient File",
+                        "Lab Report"
                     ],
                     "pivotTable": {}
                 },
