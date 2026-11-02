@@ -83,8 +83,8 @@
         },
         "patientSearch": {
             "customAttributes": {
-                "label": "Phone Number",
-                "placeholder": "Phone Number",
+                "label": "Phone Number / Employee ID",
+                "placeholder": "Phone / Employee ID",
                 "fields": ["phoneNumber","alternatePhoneNumber","Patient Type","Employee ID"]
             }
         },
